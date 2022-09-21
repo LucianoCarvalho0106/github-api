@@ -13,10 +13,16 @@ let btnLimpar = document.getElementById('btn-limpar')
 function limpar(){
     btnLimpar.addEventListener('click',()=>{
         perfil.classList.remove("exibir")
+        inputPesquisar.value=''
     })
 }
 const pesquisarNome = ()=>{
+    
 bntPesquisar.addEventListener('click',()=>{
+    if(inputPesquisar.value == ""){
+        alert('DIGITE UM USUÁRIO PARA PESQUISAR')
+        return
+    }
     perfil.classList.add("exibir")
     fetch(`https://api.github.com/users/${inputPesquisar.value}`)
     .then(data=> data.json())

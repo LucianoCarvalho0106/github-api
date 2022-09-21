@@ -39,6 +39,8 @@ body{
     outline: none;
     padding: 7px;
     font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 #btn-pesquisar,#btn-limpar{
     height: 2.5rem;
@@ -49,6 +51,10 @@ body{
     font-size: 1.5rem;
     padding: 5px;
     cursor: pointer;
+}
+.container-buttons{
+    display: flex;
+    gap: 20px;
 }
 
 #btn-limpar:hover{
@@ -74,6 +80,7 @@ body{
     visibility: hidden; 
     transition: .6s;
     overflow-y: hidden;
+    
 }
 
 #foto{
@@ -81,7 +88,10 @@ min-height: 8em;
 margin-top: 1rem;
 border-radius: 50%;
 overflow: hidden;
-border: 1px solid rgb(160, 158, 156);
+box-shadow: 1px 1px 7px #000;
+}
+#nome{
+    max-width: 80%;
 }
 #nome,#descricao,.container-projetos{
     margin-top: 1rem;
@@ -102,9 +112,42 @@ p{
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    
+    gap: 5px;
 }
 .exibir{
     height: 60vh;
     visibility: visible;
+}
+
+
+
+@media  (max-width:820px){
+    .container-pesquisa{
+        padding: 1.5rem 0rem;
+        width:100%;
+    }
+    .conteudo-pesquisa{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .container-buttons{
+        display: flex;
+        gap: 20px;
+
+    }
+.perfil{
+    width: 100%;
+    margin-top: 1rem;
+}
+#btn-pesquisar,#btn-limpar{
+    height: 4rem;
+    width: 4rem;
+}
+.container-pesquisa{
+    margin-top: 0px;
+}
+i{
+    font-size: 2rem;
+}
 }

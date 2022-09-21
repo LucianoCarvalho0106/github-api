@@ -40,7 +40,7 @@ body{
     padding: 7px;
     font-size: 1rem;
 }
-#btn-pesquisar{
+#btn-pesquisar,#btn-limpar{
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
@@ -50,6 +50,12 @@ body{
     padding: 5px;
     cursor: pointer;
 }
+
+#btn-limpar:hover{
+    background-color: rgb(128, 223, 128);
+    transition: .6s;
+}
+
 #btn-pesquisar:hover{
     background-color: rgb(243, 206, 136);
     transition: .6s;
@@ -62,20 +68,43 @@ body{
     margin-top: 2rem;
     background-color: rgb(252, 248, 244);
     border: 1px solid rgb(194, 189, 189);
-    width: 550px;
-    height: 60vh;
+    width: 40vw;
+    height: 0vh;
     border-radius: 10px;
+    visibility: hidden; 
+    transition: .6s;
+    overflow-y: hidden;
 }
 
 #foto{
-height: 9rem;
-width: 9rem;
+min-height: 8em;
 margin-top: 1rem;
 border-radius: 50%;
 overflow: hidden;
-
+border: 1px solid rgb(160, 158, 156);
 }
 #nome,#descricao,.container-projetos{
     margin-top: 1rem;
+    text-align: center;
+}
+p{
+    max-width: 70%;
 }
 
+.container-projetos{
+    display: flex;
+    gap: 23px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.container-repositorios,.container-seguidores,.container-seguindo{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    
+}
+.exibir{
+    height: 60vh;
+    visibility: visible;
+}

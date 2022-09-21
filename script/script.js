@@ -6,12 +6,18 @@ let bio = document.getElementById("descricao")
 let repositorio = document.getElementById("repositorio")
 let seguidores = document.getElementById("seguidores")
 let seguindo = document.getElementById("seguindo")
+let perfil = document.getElementById("perfil")
+let btnLimpar = document.getElementById('btn-limpar')
 
 
-
+function limpar(){
+    btnLimpar.addEventListener('click',()=>{
+        perfil.classList.remove("exibir")
+    })
+}
 const pesquisarNome = ()=>{
 bntPesquisar.addEventListener('click',()=>{
-    
+    perfil.classList.add("exibir")
     fetch(`https://api.github.com/users/${inputPesquisar.value}`)
     .then(data=> data.json())
     //.then(dado=>console.log(dado))
